@@ -1,0 +1,5 @@
+<!-- res/xml/intent_data.xml -->
+<intent xmlns:android="http://schemas.android.com/apk/res/android"
+    android:action="com.example.ACTION"
+    android:category="android.intent.category.DEFAULT"
+    android:data="http://www.example.com" />

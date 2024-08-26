@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BdNoteCalculator" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+      <item name="colorPrimary">@color/blue</item>
+
+    </style>
+
+    <style name="Theme.BdNoteCalculator" parent="Base.Theme.BdNoteCalculator" />
+</resources>

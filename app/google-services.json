@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "770080722697",
+    "project_id": "bdnotescalculator",
+    "storage_bucket": "bdnotescalculator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770080722697:android:e9ebbcb0824e52ebe78dd8",
+        "android_client_info": {
+          "package_name": "com.developeremon.bdnotecalculator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWi7hzwtW1z8omnhHDgqWZi1j84b0vWGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

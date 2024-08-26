@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    >
+
+
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue"
+            >
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="Bd Notes Calculator"
+                app:titleTextColor="@color/white"
+                app:titleCentered="true"
+                app:menu="@menu/toolbar"
+
+                />
+
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- total display start -->
+
+        <RelativeLayout
+            android:id="@+id/totallay"
+            android:layout_width="match_parent"
+            android:layout_height="110dp">
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:neumorph_shapeType="basin"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+
+
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total= "
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="@dimen/_70sdp"
+
+                        />
+                    <TextView
+                        android:id="@+id/totaltk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        />
+
+
+                </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="50dp"
+
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total notes: "
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:layout_marginLeft="@dimen/_70sdp"
+                            />
+
+                        <TextView
+                            android:id="@+id/totalnotes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            />
+
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+
+            </soup.neumorphism.NeumorphCardView>
+
+        </RelativeLayout>
+
+        <!-- total display end -->
+
+
+        <soup.neumorphism.NeumorphCardView
+            android:layout_below="@+id/totallay"
+            android:id="@+id/neumorphCardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:neumorph_shapeType="flat"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+
+
+            >
+
+
+        <!-- One layout start -->
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/tenthounded"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="1000"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="X"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_12sdp"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/ed1000"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/square_shap"
+                    android:layout_marginLeft="20dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="="
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvdisplay1000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+
+                    />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- One layout end -->
+
+
+
+        <!-- two layout start -->
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/fivethounded"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="500"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="X"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_19sdp"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/ed500"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/square_shap"
+                    android:layout_marginLeft="20dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="="
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvdisplay500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+
+                    />
+
+
+
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- two layout end -->
+
+        <!-- five layout start -->
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="100dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/twothounded"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="200"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="X"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_19sdp"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/ed200"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/square_shap"
+                    android:layout_marginLeft="20dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="="
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvdisplay200"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+
+                    />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- five layout end -->
+
+        <!-- ten layout start -->
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="150dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/onethounded"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="100"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="X"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_19sdp"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/ed100"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/square_shap"
+                    android:layout_marginLeft="20dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="="
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvdisplay100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+
+                    />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- ten layout end -->
+
+        <!-- twinty layout start -->
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="200dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/fifty"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="50"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="X"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_25sdp"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/ed50"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/square_shap"
+                    android:layout_marginLeft="20dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="="
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvdisplay50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+
+                    />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- twinty layout end -->
+
+        <!-- fifty layout start -->
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="250dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/twinty"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="20"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:gravity="right|center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="X"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_25sdp"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/ed20"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/square_shap"
+                    android:layout_marginLeft="20dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="="
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvdisplay20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+
+                    />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- fifty layout end -->
+
+        <!-- onehundred layout start -->
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="300dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ten"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="10"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:gravity="right|center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="X"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    />
+
+
+                <EditText
+                    android:id="@+id/ed10"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/square_shap"
+                    android:layout_marginLeft="20dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="="
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvdisplay10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+
+                    />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- onehundred layout end -->
+
+        <!-- twohundred layout start -->
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="350dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/five"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="5"
+                    android:textSize="15sp"
+                    android:gravity="right|center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="X"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_32sdp"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/ed5"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/square_shap"
+                    android:layout_marginLeft="20dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="="
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvdisplay5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+
+                    />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- twohundred layout end -->
+
+        <!-- fivehundred layout start -->
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="400dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/two"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="2"
+                    android:textSize="15sp"
+                    android:gravity="right|center"
+                    android:layout_marginLeft="10dp"
+
+
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="X"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_32sdp"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/ed2"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/square_shap"
+                    android:layout_marginLeft="20dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="="
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvdisplay2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+
+                    />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- tenhundred layout end -->
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="450dp"
+            android:layout_marginBottom="20dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center|left"
+
+
+                >
+
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/one"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="1"
+                    android:textSize="15sp"
+                    android:gravity="right|center"
+                    android:layout_marginLeft="10dp"
+
+
+                    />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:text="X"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_32sdp"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/ed1"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textSize="15sp"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/square_shap"
+                    android:layout_marginLeft="20dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="="
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvdisplay1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+
+                    />
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- tenhundred layout end -->
+
+        </soup.neumorphism.NeumorphCardView>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            >
+
+            <Button
+                android:id="@+id/resetbutton"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="wrap_content"
+                android:text="Reset"
+                android:layout_marginBottom="@dimen/_10sdp"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</LinearLayout>
